@@ -9,6 +9,11 @@ import org.springframework.web.bind.annotation.RestController
 @RefreshScope
 open class MessageRestController {
     @Value("\${message:Hello default}")
-    @get:RequestMapping("/message")
-    internal lateinit var message: String
+    private val message: String? = null
+
+
+    @RequestMapping("/message")
+    open fun getMessage(): String? {
+        return this.message
+    }
 }
