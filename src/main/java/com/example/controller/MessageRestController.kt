@@ -10,5 +10,5 @@ import org.springframework.web.bind.annotation.RestController
 open class MessageRestController {
     @Value("\${message:Hello default}")
     @get:RequestMapping("/message")
-    val message: String? = null
+    internal lateinit var message: String
 }
