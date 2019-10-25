@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 @RefreshScope
 open class MessageRestController {
     @Value("\${message:Hello default}")
-    private val message: String? = null
+    internal val message: String? = null
 
 
     @RequestMapping("/message")
